@@ -1,22 +1,16 @@
-import React, { useContext } from "react";
-import { Route, redirect } from "react-router-dom";
-import { AuthContext } from "./Auth";
+import { useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
+import PropTypes from 'prop-types'; 
 
-const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
-  const {currentUser} = useContext(AuthContext);
-  return (
-    <Route
-      {...rest}
-      render={routeProps =>
-        !!currentUser ? (
-          <RouteComponent {...routeProps} />
-        ) : (
-          redirect("/signup")
-        )
-      }
-    />
-  );
+const Protected = ({ children }) => {  
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+  return children;
 };
 
-
-export default PrivateRoute
+Protected.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+export default Protected;
