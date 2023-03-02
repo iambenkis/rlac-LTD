@@ -12,7 +12,7 @@ const Command = () => {
         set(
             ref(realDb, 'data/remote', 'pv'), 
             {
-                pv : 0,
+                pv : 99,
                 reg : 0
             }
         )
