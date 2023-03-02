@@ -1,8 +1,13 @@
 import React from 'react'
+import Display from './data-display'
+import Command from './command-page'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Command />
+      <Display />
+    </div>
   )
 }
 
