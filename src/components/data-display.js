@@ -28,10 +28,39 @@ const Display = () => {
 
     return (
         <div className="data">
+            <div className="information">
+                <p>Take control of your Electrical System and get informations about your it</p>
+            </div>
             <h3 className="title">Tcheck data here</h3>
             <div>
+                <div className="datas-energy">
+                    <div className="energy-data">
+                        <h3>GID Energy</h3>
+                        {
+                            display
+                                ?
+                                <>
+                                    <p>{display.realtime.regEnergy}W/h</p>
+                                </>
+                                :
+                                <p>00v</p>
+                        }
+                    </div>
+                    <div className="energy-data">
+                        <h3>PV Energy</h3>
+                        {
+                            display
+                                ?
+                                <>
+                                    <p>{display.realtime.pvEnergy}W/h</p>
+                                </>
+                                :
+                                <p>00v</p>
+                        }
+                    </div>
+                </div>
                 <div className="datas-content">
-                    <h3>Voltage</h3>
+                    <h3>Voltage:</h3>
                     {
                         display
                             ?
@@ -43,7 +72,7 @@ const Display = () => {
                     }
                 </div>
                 <div className="datas-content">
-                    <h3>Current</h3>
+                    <h3>Current:</h3>
                     {
                         display
                             ?
@@ -55,7 +84,7 @@ const Display = () => {
                     }
                 </div>
                 <div className="datas-content">
-                    <h3>Power</h3>
+                    <h3>Power:</h3>
                     {
                         display
                             ?

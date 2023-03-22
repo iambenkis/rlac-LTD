@@ -7,6 +7,9 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header-title">
+                <div className="logo">
+                    <img src="logo.png" alt="" />
+                </div>
                 <h4>Automatic Changeover Switche</h4>
             </div>
             <NavLink to='/'>Home</NavLink>
