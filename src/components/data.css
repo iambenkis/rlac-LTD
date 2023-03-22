@@ -1,0 +1,23 @@
+.data {
+    padding-top: 10rem;
+}
+
+.data .title {
+    margin-left: 1.7rem;
+}
+
+.datas-content {
+    box-shadow: 0 0 15px #2b2b2b13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.datas-content p {
+    font-size: 1.5rem;
+    color: rgb(85, 85, 85);
+}

@@ -1,29 +1,73 @@
-import React, { useState, useEffect} from "react";
-import  appConfig  from '../data/firebase';
-import { getDatabase, ref,  onValue  } from "firebase/database";
-import { useSelector, useStore  } from "react-redux";
-import { getData } from "../redux/display"; 
+import React, { useState, useEffect } from "react";
+import './data.css';
+import appConfig from '../data/firebase';
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useSelector, useStore } from "react-redux";
+import { getData } from "../redux/display";
 
 const Display = () => {
     const realDb = getDatabase();
     const bookRef = ref(realDb);
-    let obj = {}; 
+    let obj = {};
     const store = useStore();
     const data = useSelector(state => state.data)
 
-    useEffect(() => { 
-        getData(bookRef, store)
-        console.log(data, "myData")
-    },[data])
-    
-    
+    const [display, setDisplay] = useState('');
+
+
+    useEffect(() => {
+        onValue(ref(realDb), snapshot => {
+            const data = snapshot.val();
+            if (data !== null) {
+                setDisplay(Object.values(data)[0])
+            }
+        })
+    }, [])
+
+    console.log(display, 'display')
+
     return (
-        <>
-            <h1>Data here</h1>
-            <ul> 
-              <li>data</li>
-            </ul>
-        </>
+        <div className="data">
+            <h3 className="title">Tcheck data here</h3>
+            <div>
+                <div className="datas-content">
+                    <h3>Voltage</h3>
+                    {
+                        display
+                            ?
+                            <>
+                                <p>{display.realtime.voltage}V</p>
+                            </>
+                            :
+                            <p>00v</p>
+                    }
+                </div>
+                <div className="datas-content">
+                    <h3>Current</h3>
+                    {
+                        display
+                            ?
+                            <>
+                                <p>{display.realtime.current}A</p>
+                            </>
+                            :
+                            <p>00v</p>
+                    }
+                </div>
+                <div className="datas-content">
+                    <h3>Power</h3>
+                    {
+                        display
+                            ?
+                            <>
+                                <p>{display.realtime.power}W</p>
+                            </>
+                            :
+                            <p>00v</p>
+                    }
+                </div>
+            </div>
+        </div>
     )
 }
 export default Display;

@@ -1,0 +1,21 @@
+.signup {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5rem;
+    height: 100vh;
+}
+
+.signup h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.signup p {
+    text-align: center;
+}
+
+.signup button {
+    margin-bottom: 1rem;
+}

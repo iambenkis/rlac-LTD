@@ -1,12 +1,12 @@
 import React from 'react'
 import Display from './data-display'
 import Command from './command-page'
+import './style.css';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
       <Command />
-      <Display />
     </div>
   )
 }

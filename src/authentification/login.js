@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useStore } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchLoginAuth } from '../redux/login';
+import './style.css';
 
 const Login = () => {
     const emailRef = useRef();

@@ -8,6 +8,7 @@ import { useSelector, useStore } from 'react-redux';
 import { fetchSignupAuth } from '../redux/signup';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
+import './style.css';
 
 const Signup = () => { 
     const emailRef = useRef();
@@ -32,10 +33,8 @@ const Signup = () => {
             <div> 
                 <h2>Sign up</h2>
                 <form onSubmit={handleSignup}>
-                    <label for="username">Username:</label><br />
-                    <input ref={emailRef} type="text" id="username" name="username" required/><br />
-                    <label for="pwd">Password:</label><br />
-                    <input ref={passwordRef} type="password" id="pwd" name="pwd" required/><br />
+                    <input ref={emailRef} type="text" placeholder='Username' id="username" name="username" required/><br />
+                    <input ref={passwordRef} type="password" placeholder='password' id="pwd" name="pwd" required/><br />
                     <button type="submit">Submit</button>
                 </form>
                 <p>Already have an account ? <Link to='/login' >Log in</Link></p>
