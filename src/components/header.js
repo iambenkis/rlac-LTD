@@ -10,7 +10,7 @@ const Header = () => {
                 <div className="logo">
                     <img src="logo.png" alt="" />
                 </div>
-                <h4>Automatic Changeover Switche</h4>
+                <h4>Automatic Changeover Switch</h4>
             </div>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/data'>Control</NavLink>

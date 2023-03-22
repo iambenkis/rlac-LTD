@@ -65,7 +65,7 @@ const Command = () => {
                                 :
                                 <p>...</p>
                         }
-                        <button onClick={handleOnreg}>Switch GID</button>
+                        <button onClick={handleOnreg} className={display.remote.regSt}>Switch GID</button>
                     </div>
                 </div>
                 <div className="block-cont">
@@ -80,7 +80,7 @@ const Command = () => {
                                 :
                                 <p>...</p>
                         }
-                        <button onClick={handleOnpv}>Switch PV</button>
+                        <button onClick={handleOnpv} className={display.remote.pvSt}>Switch PV</button>
                     </div>
                 </div>
             </div>
