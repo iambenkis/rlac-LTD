@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+input {
+  background-color: rgb(231, 231, 231);
+  border: none;
+  border-radius: 1rem;
+  padding: .5rem .5rem;
+}
+
+form button {
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  background-color: blueviolet;
+  border: none;
+}

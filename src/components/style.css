@@ -1,0 +1,126 @@
+.header {
+    padding: 1rem 1.4rem;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 0 10px #00000021;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-title h4 {
+    margin-left: 1rem;
+}
+
+.header-title .logo img {
+    width: 4rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.active {
+    color: chartreuse;
+    border-bottom: chartreuse 4px solid;
+}
+
+.home {
+    background-color: #ebebeb;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+.command {
+    background: #fff;
+    border-radius: 1rem;
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.command .title {
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+}
+
+.block-command {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    box-shadow: 0 0 15px #2b2b2b13;
+    padding: 1rem;
+    border-radius: .6rem;
+    width: 48%;
+}
+
+.block-cont h3 {
+    text-align: center;
+}
+
+.block-cont p {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: rgb(128, 128, 128);
+}
+
+.block-cont button {
+    padding: .4rem .7rem;
+    border: none;
+    border-radius: .4rem;
+}
+
+.information {
+    width: 90%;
+    margin: 1rem auto;
+    background-color: darkorange;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.off {
+    background-color: darkorange;
+}
+
+.on {
+    background-color: chartreuse;
+}
+
+.datas-energy {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.energy-data  {
+    background-color: #fff;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.energy-data p {
+    font-size: 1rem;
+    color: rgb(122, 122, 122);
+}
