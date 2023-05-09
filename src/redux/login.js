@@ -1,5 +1,5 @@
 import produce from "immer";
-import  appConfig  from '../data/firebase';
+// import  appConfig  from '../data/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { Fetching, FETCHING, Rejected, REJECTED, Resolved, RESOLVED } from "./actions";
 
