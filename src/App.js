@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // import Display from './components/data-display';
-import Command from './components/command-page';
+// import Command from './components/command-page';
 import Signup from './authentification/signup';
 import Home from './components/home';
 import Login from './authentification/login';
 import {BrowserRouter ,Route,Routes} from "react-router-dom";
-import ProtectedRoute from './protected/protectedRoutes' 
+// import ProtectedRoute from './protected/protectedRoutes' 
 import  Protected from './protected/protectedRoutes'
 import Header from './components/header';
 import Display from './components/data-display';
