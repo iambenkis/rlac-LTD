@@ -1,12 +1,8 @@
 import React, { useRef } from 'react'; 
-import { Link } from 'react-router-dom';
-// import  appConfig  from '../data/firebase';
-import { getAuth } from 'firebase/auth' 
-// import { AuthContext } from '../data/firebase';
-// import { useFirebase } from "react-redux-firebase"; 
+import { Link } from 'react-router-dom'; 
+import { getAuth } from 'firebase/auth'  
 import { useSelector, useStore } from 'react-redux';
-import { fetchSignupAuth } from '../redux/signup';
-// import { useEffect } from 'react';
+import { fetchSignupAuth } from '../redux/signup'; 
 import { useNavigate } from 'react-router-dom'; 
 import './style.css';
 

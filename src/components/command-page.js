@@ -37,7 +37,7 @@ const Command = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    console.log(display, 'display')
+    // console.log(display, 'display')
 
     return (
         <div className="command">

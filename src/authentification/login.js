@@ -30,12 +30,10 @@ const Login = () => {
         <div className="login">
             <div> 
                 <h2>Login In</h2>
-                <form onSubmit={handleLogin}>
-                    <label for="username">Username:</label><br />
-                    <input ref={emailRef} type="text" id="username" name="username" /><br />
-                    <label for="pwd">Password:</label><br />
-                    <input ref={passwordRef} type="password" id="pwd" name="pwd" /><br />
-                    <input type="submit" value="Submit" className='button'/>
+                <form onSubmit={handleLogin}> 
+                    <input ref={emailRef} type="text" id="username" name="username" placeholder='Your Email'/><br />
+                    <input ref={passwordRef} type="password" id="pwd" name="pwd" placeholder='Your password'/><br />
+                    <button type="submit">Submit</button>
                 </form> 
                 <p>Don't have an account ? <Link to='/signUp' >sign up</Link></p>
             </div>

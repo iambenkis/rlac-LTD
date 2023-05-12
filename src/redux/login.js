@@ -30,7 +30,6 @@ export const fetchLoginAuth = (auth, email, password,store) => {
     })
 } 
 
-
 const loginReducer = (state = initialState, action) => {
     return produce(state, (draft) => {
         switch (action.type) {

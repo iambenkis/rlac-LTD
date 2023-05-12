@@ -35,7 +35,7 @@ const signupReducer = (state = initialState, action) => {
             case FETCHING: { 
                 if (draft.status === 'void'){
                     draft.status = 'pending'
-                    console.log(draft)
+                    // console.log(draft)
                     return;
                 }
                 if (draft.status === 'rejected'){
