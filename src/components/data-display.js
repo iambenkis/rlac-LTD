@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import './data.css';
-import appConfig from '../data/firebase';
+// import appConfig from '../data/firebase';
 import { getDatabase, ref, onValue } from "firebase/database";
-import { useSelector, useStore } from "react-redux";
-import { getData } from "../redux/display";
+// import { useSelector, useStore } from "react-redux";
+// import { getData } from "../redux/display";
 
 const Display = () => {
     const realDb = getDatabase();
-    const bookRef = ref(realDb);
-    let obj = {};
-    const store = useStore();
-    const data = useSelector(state => state.data)
+    // const bookRef = ref(realDb);
+    // let obj = {};
+    // const store = useStore();
+    // const data = useSelector(state => state.data)
 
     const [display, setDisplay] = useState('');
 
@@ -40,7 +40,7 @@ const Display = () => {
                             display
                                 ?
                                 <>
-                                    <p>{display.realtime.regEnergy}W/h</p>
+                                    <p>{(display.realtime.regEnergy).toFixed(2)} kwh</p>
                                 </>
                                 :
                                 <p>00v</p>
@@ -52,7 +52,7 @@ const Display = () => {
                             display
                                 ?
                                 <>
-                                    <p>{display.realtime.pvEnergy}W/h</p>
+                                    <p>{(display.realtime.pvEnergy).toFixed(2)} kwh</p>
                                 </>
                                 :
                                 <p>00v</p>
@@ -65,7 +65,7 @@ const Display = () => {
                         display
                             ?
                             <>
-                                <p>{display.realtime.voltage}V</p>
+                                <p>{(display.realtime.voltage).toFixed(2)}V</p>
                             </>
                             :
                             <p>00v</p>
@@ -77,7 +77,7 @@ const Display = () => {
                         display
                             ?
                             <>
-                                <p>{display.realtime.current}A</p>
+                                <p>{(display.realtime.current).toFixed(2)}A</p>
                             </>
                             :
                             <p>00v</p>
@@ -89,7 +89,7 @@ const Display = () => {
                         display
                             ?
                             <>
-                                <p>{display.realtime.power}W</p>
+                                <p>{((display.realtime.current * display.realtime.voltage)/1000).toFixed(2)} kW</p>
                             </>
                             :
                             <p>00v</p>
