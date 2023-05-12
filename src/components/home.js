@@ -1,5 +1,4 @@
-import React from 'react'
-import Display from './data-display'
+import React from 'react' 
 import Command from './command-page'
 import './style.css';
 

@@ -1,5 +1,5 @@
 import produce from "immer";
-import  appConfig  from '../data/firebase';
+// import  appConfig  from '../data/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { Fetching, FETCHING, Rejected, REJECTED, Resolved, RESOLVED } from "./actions";
 
@@ -59,7 +59,7 @@ const loginReducer = (state = initialState, action) => {
                 return;
             }
             case REJECTED: {
-                if(draft.status == "pending" || draft.status == "updating") {
+                if(draft.status === "pending" || draft.status === "updating") {
                     draft.error = action.payload
                     draft.data = null
                     draft.status = "rejected"

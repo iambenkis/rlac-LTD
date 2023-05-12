@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './data.css';
-// import appConfig from '../data/firebase';
 import { getDatabase, ref, onValue } from "firebase/database";
-// import { useSelector, useStore } from "react-redux";
-// import { getData } from "../redux/display";
 
 const Display = () => {
     const realDb = getDatabase();
-    // const bookRef = ref(realDb);
-    // let obj = {};
-    // const store = useStore();
-    // const data = useSelector(state => state.data)
 
     const [display, setDisplay] = useState('');
 

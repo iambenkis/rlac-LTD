@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
-import appConfig from '../data/firebase';
-import { useSelector, useStore } from "react-redux";
-import { getDatabase, ref, set, onValue } from "firebase/database";
-import { getData } from "../redux/display";
+import React, { useState, useEffect } from "react";  
+import { getDatabase, ref, set, onValue } from "firebase/database"; 
 
 const Command = () => {
-    const realDb = getDatabase();
-    const bookRef = ref(realDb);
-    let obj = {};
-    const store = useStore();
-    const data = useSelector(state => state.data)
-
-    const [display, setDisplay] = useState('');
-
-    const pvStatus = "ON"
+    const realDb = getDatabase();  
+    const [display, setDisplay] = useState(''); 
 
     const handleOnpv = (e) => {
         e.preventDefault();

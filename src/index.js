@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals'; 
 import { Provider } from 'react-redux';
-import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
-import { BrowserRouter } from 'react-router-dom';
+// import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
+// import { BrowserRouter } from 'react-router-dom';
 import { store } from './redux/store';
-import { app } from './data/firebase';
+// import { app } from './data/firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const rrfConfig = {
-  userProfile: "users",
-  useFirestoreForProfile: true,
-};
+// const rrfConfig = {
+//   userProfile: "users",
+//   useFirestoreForProfile: true,
+// };
 
 root.render(
   <React.StrictMode>
