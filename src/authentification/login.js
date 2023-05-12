@@ -1,5 +1,5 @@
 import { getAuth } from 'firebase/auth';
-import React, { useEffect, useRef, useState } from 'react'; 
+import React, { useEffect, useRef } from 'react'; 
 import { useSelector, useStore } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchLoginAuth } from '../redux/login';
@@ -23,6 +23,7 @@ const Login = () => {
       if (localStorage.getItem("token")) {
         navigate('/');
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     },[state]); 
 
     return (
