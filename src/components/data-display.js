@@ -15,6 +15,7 @@ const Display = () => {
                 setDisplay(Object.values(data)[0])
             }
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     console.log(display, 'display')
