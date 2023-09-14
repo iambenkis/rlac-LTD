@@ -18,12 +18,10 @@ const Display = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // console.log(display, 'display')
-
     return (
         <div className="data">
             <div className="control_image">
-                <img src="control.png" alt="control"/>
+                <img src="control.png" alt="control" />
             </div>
             <h3 className="title">Your datas</h3>
             <div>
@@ -83,7 +81,7 @@ const Display = () => {
                         display
                             ?
                             <>
-                                <p>{((display.realtime.current * display.realtime.voltage)/1000).toFixed(2)} kW</p>
+                                <p>{((display.realtime.current * display.realtime.voltage) / 1000).toFixed(2)} kW</p>
                             </>
                             :
                             <p>00v</p>
