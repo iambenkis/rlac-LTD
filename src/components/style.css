@@ -147,5 +147,10 @@
     width: 80%;
     margin: 0 auto;
     padding-top: 12rem;
+    overflow-x: auto;
+}
+
+.inspection {
+    width: 100%;
 }
 
