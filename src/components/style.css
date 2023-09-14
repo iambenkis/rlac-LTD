@@ -38,6 +38,15 @@
     padding-top: 10rem;
 }
 
+.home-image {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.home-image img {
+    width: 100%;
+}
+
 .command {
     background: #fff;
     border-radius: 1rem;
