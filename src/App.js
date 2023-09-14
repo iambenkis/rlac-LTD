@@ -8,6 +8,7 @@ import {BrowserRouter ,Route,Routes} from "react-router-dom";
 import  Protected from './protected/protectedRoutes'
 import Header from './components/header';
 import Display from './components/data-display';
+import Statistics from './components/statistics';
 
 function App() {
   
@@ -27,6 +28,11 @@ function App() {
             <Route path="/data" element={
               <Protected>
                  <Display />
+              </Protected>
+            }/>
+            <Route path="/statistics" element={
+              <Protected>
+                 <Statistics />
               </Protected>
             }/>
             <Route path="/signup" element={<Signup/>} />
