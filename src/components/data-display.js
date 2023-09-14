@@ -22,10 +22,10 @@ const Display = () => {
 
     return (
         <div className="data">
-            <div className="information">
-                <p>Take control of your Electrical System and get informations about your it</p>
+            <div className="control_image">
+                <img src="control.png" alt="control"/>
             </div>
-            <h3 className="title">Tcheck data here</h3>
+            <h3 className="title">Your datas</h3>
             <div>
                 <div className="datas-energy">
                     <div className="energy-data">

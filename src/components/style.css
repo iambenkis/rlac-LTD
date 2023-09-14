@@ -55,6 +55,15 @@
     margin: 0 auto;
 }
 
+.control_image {
+    width: 60%;
+    margin: 1rem auto;
+}
+
+.control_image img {
+    width: 100%;
+}
+
 .command .title {
     margin-top: 1rem;
     margin-bottom: .3rem;
@@ -139,3 +148,4 @@
     margin: 0 auto;
     padding-top: 12rem;
 }
+
