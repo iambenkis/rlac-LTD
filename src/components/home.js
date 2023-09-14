@@ -1,12 +1,15 @@
-import React from 'react'
-import Display from './data-display'
+import React from 'react' 
 import Command from './command-page'
 import './style.css';
+
 
 const Home = () => {
   return (
     <div className='home'>
       <Command />
+      <div className='home-image'>
+        <img src='log.png' alt='home-log' />
+      </div>
     </div>
   )
 }

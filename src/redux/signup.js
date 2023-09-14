@@ -1,9 +1,9 @@
 import produce from "immer";
-import  appConfig  from '../data/firebase';
+// import  appConfig  from '../data/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth' 
 import { Fetching, Rejected, Resolved } from "./actions";
 import { FETCHING, RESOLVED, REJECTED } from "./actions";
-import { Link, useNavigate } from 'react-router-dom';
+// import { Link, useNavigate } from 'react-router-dom';
 
 const initialState = {
     status: "void",
@@ -35,7 +35,7 @@ const signupReducer = (state = initialState, action) => {
             case FETCHING: { 
                 if (draft.status === 'void'){
                     draft.status = 'pending'
-                    console.log(draft)
+                    // console.log(draft)
                     return;
                 }
                 if (draft.status === 'rejected'){
